@@ -19,7 +19,7 @@
     <link rel="stylesheet" type="text/css" href="css/loaders.css">
 
 </head>
-<body id="pageup">
+<body id="pageup" class="secpage">
 	
 	<header>
 		<div class="container-fluid">
@@ -31,15 +31,11 @@
 				    	<span><ion-icon class="play__btn" name="play-circle"></ion-icon></span>
 				      <h5 class="text-white h4 navbar__heading">Explore mixed tape</h5>
 				      <span class="text-muted navbar__subheading">Queued tracks playlist</span>
-				      <span class="about">
-				      	<ion-icon class="backarrow__icon" name="arrow-round-back"></ion-icon>
-				      	<a href="index.html">Home</a>
-				      </span>
 				    </div>
 				  </div>
 				  <nav class="navbar navbar-dark transparent nav__content">
 				  	<div class="nav__logo--box">
-				  		<img class="nav__logo--image" src="img/white-logo.png">
+				  		<a href="index.html"><img class="nav__logo--image" src="img/white-logo.png"></a>
 				  	</div>
 				    <button class="navbar-toggler ml-auto nav__button" type="button" data-toggle="collapse" data-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">
 				      <span class="navbar-icon"><ion-icon class="nav__icon" name="apps"></ion-icon></span>
@@ -62,6 +58,26 @@
 	      <a class="nav-link sidenav__list" id="v-pills-book-tab" data-toggle="pill" href="#v-pills-book" role="tab" aria-controls="v-pills-book" aria-selected="false"><ion-icon class="sidenav__icon" name="logo-buffer"></ion-icon></a>
 	    </div>
 	</aside>
+
+	<div id="sidebar__mobile" class="slideleft d-block d-sm-block d-md-none">
+		<div  class="box__one">
+			<div class="box__two">
+				<button onclick="moveOut()" id="toggle-display" class="btn moveleft"><ion-icon name="close"></ion-icon></button>
+			</div>
+			<div id="v-pills-tab" role="tablist" aria-orientation="vertical" class="nav flex-column">
+				<a class="nav-link sidenav__list box__icon-1" id="v-pills-profiles-tab" data-toggle="pill" href="#v-pills-profiles" role="tab" aria-controls="v-pills-profiles" aria-selected="true"><ion-icon class="sidenav__icon" name="contact"></ion-icon></a>
+			
+				<a class="nav-link sidenav__list box__icon-2" id="v-pills-gallery-tab" data-toggle="pill" href="#v-pills-gallery" role="tab" aria-controls="v-pills-gallery" aria-selected="false"><ion-icon class="sidenav__icon" name="images"></ion-icon></a>
+			
+				<a class="nav-link sidenav__list box__icon-3" id="v-pills-video-tab" data-toggle="pill" href="#v-pills-video" role="tab" aria-controls="v-pills-video" aria-selected="false"><ion-icon class="sidenav__icon" name="videocam"></ion-icon></a>
+			
+				<a class="nav-link sidenav__list box__icon-4" id="v-pills-book-tab" data-toggle="pill" href="#v-pills-book" role="tab" aria-controls="v-pills-book" aria-selected="false"><ion-icon class="sidenav__icon" name="logo-buffer"></ion-icon></a>
+			</div>
+		</div>
+		
+	</div>
+
+	<button onclick="moveIn()" id="toggle-display" class="btn moveright d-block d-sm-block d-md-none"><ion-icon name="arrow-forward"></ion-icon></button>
 
 	
 
@@ -310,24 +326,93 @@
 				</div>
 
 				<div class="col-sm-12 col-md-12 col-lg-3 reviews__container">
+					
+					<div class="instagram">
+
+						<div class="card bg-dark">
+							<div class="container card-header">
+								<div class="row">
+									<div class="col-3">
+										<img class="instagram__dp rounded-circle img-fluid" src="img/insta/dp.jpg">
+									</div>
+									<div class="instagram__text col-6">
+										<h6 class="instagram__heading">dj.lc</h6>
+										<span class="instagram__subheading">a.k.a World Famous DJ</span>
+									</div>
+									<div class="col-3">
+										<a href="https://www.instagram.com/dj.lc/" class="btn instagram__btn">FOLLOW</a>
+									</div>
+								</div>
+							</div>
+							<div class="container instagram__card-body card-body">
+								<div class="row">
+									<div class="instagram__box col-4">
+										<img class="instagram__img img-fluid" src="img/insta/01a.jpg">
+									</div>
+									<div class="instagram__box col-4">
+										<img class="instagram__img img-fluid" src="img/insta/02a.jpg">
+									</div>
+									<div class="instagram__box col-4">
+										<img class="instagram__img img-fluid" src="img/insta/03a.jpg">
+									</div>
+									<div class="instagram__box col-4">
+										<img class="instagram__img img-fluid" src="img/insta/04a.jpg">
+									</div>
+									<div class="instagram__box col-4">
+										<img class="instagram__img img-fluid" src="img/insta/05a.jpg">
+									</div>
+									<div class="instagram__box col-4">
+										<img class="instagram__img img-fluid" src="img/insta/09a.jpg">
+									</div>
+								</div>
+							</div>
+							<div class="card-footer">
+								<div class="container-fluid">
+									<div class="row">
+										<div class="col-10">
+											<span><ion-icon class="footer__icon" name="heart"></ion-icon></span>
+											<span><ion-icon class="footer__icon" name="chatboxes"></ion-icon></span>
+											<span><ion-icon class="footer__icon" name="share"></ion-icon></span>
+										</div>
+										<div class="col-2 text-right">
+											<ion-icon class="footer__icon" name="bookmark"></ion-icon>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+
+					</div>
 
 					<div class="card text-white bg-dark">
-					  <div class="card-header">
-					  	<img class="review__img rounded-circle" src="img/comment-img1.jpg">
-					  	<span class="review__heading">Unogu Davidson</span>
-					  	<span class="review__subheading text-muted">16 Oct 2019 - 2:14 PM</span>
+					  <div class="container card-header">
+					  	<div class="row">
+					  		<div class="review__img-dp col-2">
+					  			<img class="review__img rounded-circle" src="img/comment-img1.jpg">
+					  		</div>
+					  		<div class="review__text col-10">
+					  			<span class="review__heading">Unogu Davidson</span>
+					  			<p class="review__subheading text-muted">16 Oct 2019 - 2:14 PM</p>
+					  		</div>
+					  	</div>
 					  </div>
 					  <div class="card-body">
 					    <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-					    tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+					    tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,quis nostrud exercitation ullamco laboris consequat.</p>
 					  </div>
 					</div>
 
 					<div class="card text-white bg-dark">
-					  <div class="card-header">
-					  	<img class="review__img rounded-circle" src="img/comment-img2.jpg">
-					  	<span class="review__heading">Unogu Davidson</span>
-					  	<span class="review__subheading text-muted">16 Oct 2019 - 2:14 PM</span>
+					  <div class="container card-header">
+					  	<div class="row">
+					  		<div class="review__img-dp col-2">
+					  			<img class="review__img rounded-circle" src="img/comment-img2.jpg">
+					  		</div>
+					  		<div class="review__text col-10">
+					  			<span class="review__heading">Unogu Davidson</span>
+					  			<p class="review__subheading text-muted">16 Oct 2019 - 2:14 PM</p>
+					  		</div>
+					  	</div>
 					  </div>
 					  <div class="card-body">
 					    <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
@@ -338,6 +423,12 @@
 			</div>
 		</div>
 	</section>
+
+	<div class="spacing"></div>
+
+	<footer class="bottom__content bottom__fixed text-center">
+		<p class="footer__text">Designed by <a href="">Nimbbly Innovation</a></p>
+	</footer>
 
 	<div class="loader">
 		<div class="loader-inner line-scale-pulse-out">
@@ -368,6 +459,7 @@
 	<script src="loaders.css.js"></script>
 
 	<script>
+		// loaders
 		$(document).ready(function(){
 
 			$('#details').hide();
@@ -386,6 +478,20 @@
 			})
 		})
 
+		// mobile sidebar 
+		function moveIn() {
+		  var element = document.getElementById("sidebar__mobile");
+		  element.classList.remove("slideleft");
+		  element.classList.add("slideright");
+		}
+
+		function moveOut() {
+		  var element = document.getElementById("sidebar__mobile");
+		  element.classList.remove("slideright");
+		  element.classList.add("slideleft");
+		}
+
+		// form submit btn
 		$('#form-btn').click(function() {
 		  $('#form-btn').html('<span class="spinner-border spinner-border-sm mr-2" role="status" aria-hidden="true"></span>Loading...').addClass('disabled');
 		  setTimeout(function() {

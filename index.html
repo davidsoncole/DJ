@@ -6,6 +6,9 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
+    <!-- taskbar -->
+    <meta name="theme-color" content="#232323" />
+
 	<title>DJ-LC | world's famous</title>
 
 	<!-- Bootstrap core CSS -->
@@ -31,8 +34,6 @@
 				    	<span><ion-icon class="play__btn" name="play-circle"></ion-icon></span>
 				      <h5 class="text-white h4 navbar__heading">Explore mixed tape</h5>
 				      <span class="text-muted navbar__subheading">Queued tracks playlist</span>
-				      <span class="about"><a href="details.html">About Me</a> <ion-icon class="forwordarrow__icon" name="arrow-forward"></ion-icon></span>
-				      <div class="about__img"></div>
 				    </div>
 				  </div>
 				  <nav class="navbar navbar-dark transparent nav__content">
@@ -47,13 +48,47 @@
 				
 			</div>
 		</div>
+
+		<h1 class="main__text lax" data-lax-translate-y="0 0, 400 -300" data-lax-opacity="0 1, 50 1, 200 0">WORLD'S FAMOUS</h1>
+		<ion-icon class="moveup__icon" name="navigate"></ion-icon>
+
 	</header>
 
-	<div id="overlay"></div>
 
-	<h1><span class="home__heading-one">WORLD'S</span> <span class="home__heading-two">FAMOUS</span></h1>
-	<h3 class="home__subheading lead">DJ LC</h3>
-	<a href="details.html" class="btn about__btn">ABOUT ME</a>
+	<div class="image__bg"></div>
+	<img class="image__shadow" src="img/shadow.png">
+	<img class="image__shadow2" src="img/shadow.png">
+
+	<div class="container-fluid secondary text-center lax" data-lax-translate-y="0 0, 400 -100" data-lax-opacity="0 0, 400 1">
+		<div class="">
+			<a href="details.html" class="btn link__btn">ABOUT DJ LC</a>
+			<h4 class="text__title">Preview</h4>
+		</div>
+		
+		<p class="sub__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod.</p>
+	</div>
+
+	<section>
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-4">
+					<div class="row">
+						<div class="col-4"></div>
+						<div class="col-8"></div>
+						<div class="col-12"></div>
+					</div>
+				</div>
+				<div class="col-lg-4"></div>
+				<div class="col-lg-4"></div>
+			</div>
+		</div>
+	</section>
+
+	<footer class="bottom__content text-center">
+		<p class="footer__text">Designed by <a href="#">Nimbbly Innovation</a></p>
+	</footer>
+
+
 
       
       
@@ -70,9 +105,12 @@
 	<!-- Ionicons -->
 	<script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script>
 
+	<script src="https://cdn.jsdelivr.net/npm/lax.js" >
+
 	<script src="loaders.css.js"></script>
 
 	<script>
+		// loaders
 		$(document).ready(function(){
 
 			$('#details').hide();
@@ -90,6 +128,19 @@
 				}
 			})
 		})
+
+		// parallax
+		window.onload = function() {
+			lax.setup() // init
+
+			const updateLax = () => {
+				lax.update(window.scrollY)
+				window.requestAnimationFrame(updateLax)
+			}
+
+			window.requestAnimationFrame(updateLax)
+		}
+
 	</script>
 
 </body>
